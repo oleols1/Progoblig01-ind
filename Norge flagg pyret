@@ -1,0 +1,30 @@
+redbackground = rectangle(400, 200, "solid", "red")
+white1 = rectangle(400, 50, "solid", "white")
+white2 = rectangle(50, 400, "solid", "white")
+blue1 = rectangle(400, 30, "solid", "blue")
+blue2 = rectangle(30, 200, "solid", "blue")
+#definert de forskjellige figurene jeg har behov for å bruke i bilde av Norges flagg
+
+redwhite = overlay(white1, redbackground)
+#definert rød og hvit sammen for å gjøre det enklere å lage ett grunnlag (kunne gjort dette med fler varianter også)
+
+redwhitebackground = put-image(
+  white2,
+  140, 50,
+  redwhite)
+#lagd ett grunnlag med rød bakgrunn og hvitt kryss
+
+redwhitebluebackground = put-image(
+  blue1,
+  200, 100,
+  redwhitebackground)
+#bygger på tidligere definisjon "redwhitebackground", danner en strek i blå
+
+redwhitebluebackground1 = put-image(
+  blue2,
+  140, 100,
+  redwhitebluebackground)
+#siste definisjon som trengs bygger videre på "redwhitebluebackground"
+
+redwhitebluebackground1
+#lagt ved definering på slutten enkel så jeg kan den alltid vil komme i output vinduet når man trykker "Run"
